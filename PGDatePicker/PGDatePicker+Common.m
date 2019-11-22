@@ -63,7 +63,7 @@
     NSDate *date = [formatter dateFromString:dateStr];
     NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
     if (!date) {
-        return 0
+        return 0;
     }
     NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay
                                    inUnit: NSCalendarUnitMonth
