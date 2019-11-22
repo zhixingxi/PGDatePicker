@@ -1134,7 +1134,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
 - (NSArray *)yearList {
     if (!_yearList) {
         NSUInteger index = self.maximumComponents.year - self.minimumComponents.year;
-        NSMutableArray *years = [NSMutableArray arrayWithCapacity:index];
+        NSMutableArray *years = [NSMutableArray arrayWithCapacity:(index < 0 ? 0 : index)];
         for (NSUInteger i = self.minimumComponents.year; i <= self.maximumComponents.year; i++) {
             [years addObject:[@(i) stringValue]];
         }
@@ -1161,7 +1161,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
             maximum = self.maximumComponents.month;
             
         }
-        NSMutableArray *months = [NSMutableArray arrayWithCapacity:maximum];
+        NSMutableArray *months = [NSMutableArray arrayWithCapacity:(maximum < 0 ? 0 : maximum)];
         for (NSUInteger i = minimum; i <= maximum; i++) {
             [months addObject:[@(i) stringValue]];
         }
@@ -1202,7 +1202,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
                 maximum = index;
             }
         }
-        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:index];
+        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(index < 0 ? 0 : index)];
         for (NSUInteger i = minimum; i <= maximum; i++) {
             if (i < 10) {
                 [hours addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -1257,7 +1257,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
                 maximum = index;
             }
         }
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:index];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(index < 0 ? 0 : index)];
         for (NSUInteger i = minimum; i <= maximum; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -1307,7 +1307,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
             }
         }
         NSUInteger index = maximum - minimum;
-        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:index];
+        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(index < 0 ? 0 : index)];
         for (NSUInteger i = minimum; i <= maximum; i+=self.secondInterval) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -1336,7 +1336,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
             NSString *month = self.monthList[index];
             NSUInteger day = [self daysWithMonthInThisYear:self.currentComponents.year withMonth:[month integerValue]];
             {
-                NSMutableArray *days = [NSMutableArray arrayWithCapacity:day];
+                NSMutableArray *days = [NSMutableArray arrayWithCapacity:(day < 0 ? 0 : day)];
                 NSInteger minDay = 1, maxDay = day;
                 if (i == firstIndex) {
                     minDay = self.minimumComponents.day;
