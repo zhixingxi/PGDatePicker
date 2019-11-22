@@ -154,7 +154,7 @@
         self.hourList = hours;
     }else{
         tmp = false;
-        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i++) {
             [hours addObject:[@(i) stringValue]];
         }
@@ -207,7 +207,7 @@
         self.hourList = hours;
     }else{
         tmp = false;
-        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i++) {
             [hours addObject:[@(i) stringValue]];
         }
@@ -257,7 +257,7 @@
         self.hourList = hours;
     }else{
         tmp = false;
-        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *hours = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i++) {
             [hours addObject:[@(i) stringValue]];
         }
@@ -313,7 +313,7 @@
         self.minuteList = minutes;
     }else{
         refresh = false;
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -381,7 +381,7 @@
         self.minuteList = minutes;
     }else{
         tmp = false;
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -439,7 +439,7 @@
         self.minuteList = minutes;
     }else{
         tmp = false;
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -513,7 +513,7 @@
         self.minuteList = minutes;
     }else{
         refresh = false;
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -579,7 +579,7 @@
         self.minuteList = minutes;
     }else{
         tmp = false;
-        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *minutes = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.minuteInterval) {
             if (i < 10) {
                 [minutes addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -642,7 +642,7 @@
         self.secondList = seconds;
     }else{
         tmp = false;
-        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.secondInterval) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -714,7 +714,7 @@
         self.secondList = seconds;
     }else{
         tmp = false;
-        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.secondInterval) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -775,7 +775,7 @@
         self.secondList = seconds;
     }else{
         tmp = false;
-        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.secondInterval) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%ld", i]];
@@ -853,7 +853,7 @@
         self.secondList = seconds;
     }else{
         tmp = false;
-        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length];
+        NSMutableArray *seconds = [NSMutableArray arrayWithCapacity:(length < 0 ? 0 : length)];
         for (NSUInteger i = 0; i <= length; i+=self.secondInterval) {
             if (i < 10) {
                 [seconds addObject:[NSString stringWithFormat:@"0%ld", i]];
